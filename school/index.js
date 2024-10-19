@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const { Kafka } = require('kafkajs');
 
 const app = express();
 
@@ -10,4 +11,8 @@ app.get('/', (req, res) => {
 	res.json({ message: 'Hello from school' });
 });
 
-app.listen(3000, () => console.log('School listenting at port 3000'));
+app.get('/send', (req, res) => {
+	res.json({ message: 'school' });
+});
+
+app.listen(3005, () => console.log('School listenting at port 3005'));

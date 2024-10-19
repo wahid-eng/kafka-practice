@@ -10,4 +10,8 @@ app.get('/', (req, res) => {
 	res.json({ message: 'Hello from teacher' });
 });
 
-app.listen(3001, () => console.log('Teacher listenting at port 3001'));
+app.get('/send', (req, res) => {
+	res.json({ message: 'teacher' });
+});
+
+app.listen(3007, () => console.log('Teacher listenting at port 3007'));
